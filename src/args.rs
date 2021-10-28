@@ -2,19 +2,19 @@ use structopt::StructOpt;
 
 
 #[derive(StructOpt, Debug)]
-#[structop(name="xpend")]
-pub struct Args {
+#[structopt(name="xpend")]
+pub enum Args {
     Add {
-        #[structop(short)]
+        #[structopt(short)]
         amount: usize,
-        #[structop(short)]
+        #[structopt(short)]
         reason: String
-    }
+    },
 
     Take {
-        #[structop(short)]
+        #[structopt(short)]
         amount: usize,
-        #[structop(short)]
+        #[structopt(short)]
         reason: String
     }
 }
