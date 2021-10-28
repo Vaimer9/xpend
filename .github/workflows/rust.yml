@@ -16,6 +16,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: get_rusty
+      run: curl https://sh.rustup.rs -sSf | sh -s -- -y
     - name: Build
       run: cargo build --verbose
     - name: Run tests
