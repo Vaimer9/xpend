@@ -10,14 +10,14 @@ pub fn make_folder() -> io::Result<()> {
     Ok(())
 }
 
-fn make_file() -> io::Result<()> {
+pub fn make_file() -> io::Result<()> {
     if let Some(config_folder) = BaseDirs::new() {
         fs::File::create(proj.home_dir().join(".xpend"));
     }
     Ok(())
 }
 
-fn read_file() -> Result<String, Box<dyn std::error::Error>> {
+pub fn read_file() -> Result<String, Box<dyn std::error::Error>> {
     if let Some(config_folder) = BaseDirs::new() {
         let mut file = fs::File::open(config_folder.home_dir().join(".xpend").join("config"));
         let mut content = String::new();
