@@ -1,5 +1,6 @@
 use std::fs;
 use std::io;
+use std::io::Read;
 use directories::BaseDirs;
 
 pub fn make_folder() -> io::Result<()> {
