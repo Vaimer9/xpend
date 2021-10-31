@@ -2,8 +2,8 @@ mod init;
 mod args;
 
 use args::Args;
-
+use structopt::StructOpt;
 
 fn main() {
-    println!("Hello, world!");
+    let args = Args::from_args();
 }

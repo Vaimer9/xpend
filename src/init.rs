@@ -7,9 +7,9 @@ pub fn make_folder() -> io::Result<()> {
     if let Some(config_folder) = BaseDirs::new() {
         fs::create_dir(config_folder.home_dir().join(".xpend"));
     }
-    
     Ok(())
 }
+
 
 pub fn make_file() -> io::Result<()> {
     if let Some(config_folder) = BaseDirs::new() {

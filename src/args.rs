@@ -1,6 +1,8 @@
 use structopt::StructOpt;
 
 
+
+// get command line args using structopt
 #[derive(StructOpt, Debug)]
 #[structopt(name="xpend")]
 pub enum Args {
